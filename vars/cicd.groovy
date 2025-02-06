@@ -8,7 +8,7 @@ def maven()
 }
 def newdeploy(jobname,ip,context)
 {
-  scp "/var/lib/jenkins/workspace/${jobname}/webapp/target/webapp.war ubuntu@${ip}:/var/lib/tomcat10/webapps/${context}.war"
+  sh "scp /var/lib/jenkins/workspace/${jobname}/webapp/target/webapp.war ubuntu@${ip}:/var/lib/tomcat10/webapps/${context}.war"
 }
 def selenium(jobname)
 {
